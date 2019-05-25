@@ -1,0 +1,12 @@
+1. the process reads ld.so* and files like that 
+to see if the user has permissions to use said command.
+ld.so also finds and loads the shared libraries needed for the 
+program thats run in this case it is "wc". it prepares 
+the program to run then runs it.
+
+2. *locale* files are accessed afterwards to read and prepare
+local settings and configurations before running "wc"
+
+3. the program "wc" reads files in chunks, each chunk is 16384 bytes
+
+4. exit_group() does not return does not return a value
